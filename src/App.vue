@@ -49,4 +49,8 @@ body {
 ul {
   list-style: none;
 }
+
+:root {
+  --orange: #F86011;
+}
 </style>

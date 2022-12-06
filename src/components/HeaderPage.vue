@@ -142,7 +142,7 @@ export default {
     padding: 1rem 2rem;
     border-radius: 1rem;
     color: #F96C23;
-    background-color: #FFE7DA;
+    background-color: var(--light_orange);
     cursor: pointer;
     &:hover{
       color: white;
@@ -300,7 +300,7 @@ export default {
     padding: 1rem 2rem;
     border-radius: 1rem;
     color: #F96C23;
-    background-color: #FFE7DA;
+    background-color: var(--light_orange);
     cursor: pointer;
     &:hover{
       color: white;

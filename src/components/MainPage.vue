@@ -1,5 +1,28 @@
 <template>
   <main class="bg-white">
+    <div class="container-support">
+      <div
+        v-if="open"
+        class="message"
+      >
+        <font-awesome-icon
+          icon="fa-solid fa-xmark"
+          @click="(open = !open)"
+        />
+        <div class="message-text">
+          <!-- eslint-disable-next-line -->
+          This is a free HubSpot live chat. You can create your own chat  flows and engage your flows and engage your customers with Avada & HubSpot!
+        </div>
+      </div>
+      <button
+        class="support"
+        @click="(open = !open)"
+      >
+        <font-awesome-icon
+          icon="fa-solid fa-message"
+        />
+      </button>
+    </div>
     <div class="main-container">
       <!-- Prima immagine -->
       <div class="container-1">
@@ -143,6 +166,54 @@
           <button class="mod-btn"><font-awesome-icon icon="fa-solid fa-phone" /> (555) 802-1234</button>
           </div>
         </div>
+        <!-- Organizazzione di fiducia -->
+        <div class="container-organisations">
+          <h1>Trusted by Leading Organisations</h1>
+          <div class="container-people">
+            <div>
+              <img
+                src="@/assets/img/signora.jpg"
+                alt="signora"
+              >
+              <h1>How Spaces attracted five million visitors by improving the content</h1>
+              <div class="bold-num">
+                200%
+              </div>
+              <div class="desciption">
+                Higther revenue
+              </div>
+            </div>
+            <div>
+              <img
+                src="@/assets/img/signore.jpg"
+                alt="signore"
+              >
+              <h1>Creativity helped Hemisferio to increase their brand reach vertically</h1>
+              <div class="bold-num">
+                10X
+              </div>
+              <div class="desciption">
+                Sales increase with the same ad spend
+              </div>
+            </div>
+            <div>
+              <img
+                src="@/assets/img/signora2.jpg"
+                alt="signore"
+              >
+              <h1>How DigitalBox used Al-powered data insight to boost sales</h1>
+              <div class="bold-num">
+                3-year
+              </div>
+              <div class="desciption">
+                Partnership with Avada Consultant
+              </div>
+            </div>
+          </div>
+          <button class="mod-btn">
+            Read More Case Studies
+          </button>
+        </div>
       </div>
     </div>
   </main>
@@ -150,7 +221,14 @@
 
 <script>
 export default {
-
+  props: {
+    arrMessage: Array,
+  },
+  data() {
+    return {
+      open: true,
+    };
+  },
 };
 </script>
 
@@ -158,6 +236,44 @@ export default {
 .bg-white {
   background-color: white;
   margin-top: 10rem;
+  position: relative;
+  .container-support {
+    .message {
+      position: fixed;
+      bottom: 5.5rem;
+      right: 4rem;
+      padding: .8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 250px;
+      height: 200px;
+      font-size: 1.5rem;
+      background-color: white;
+      box-shadow: 3px 3px 10px 3px #EBEBEB;
+      z-index: 100;
+      cursor: pointer;
+      .message-text {
+        font-size: 1rem;
+      }
+    }
+    .support {
+      position: fixed;
+      bottom: 1rem;
+      right: .5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      border: 0;
+      border-radius: 100%;
+      background-color: var(--orange);
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
 }
 .main-container {
   max-width: 1200px;
@@ -177,27 +293,27 @@ export default {
     align-items: center;
   }
   .container-text {
-    h1 {
-      font-size: 3rem;
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .mod-btn {
+        font-size: 1.2rem;
+        border: 0;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        color: #F96C23;
+        background-color: #FFE7DA;
+        cursor: pointer;
+        &:hover{
+          color: white;
+          background-color: var(--orange);
+        }
+      }
     }
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    .mod-btn {
-    font-size: 1.2rem;
-    border: 0;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    color: #F96C23;
-    background-color: #FFE7DA;
-    cursor: pointer;
-    &:hover{
-      color: white;
-      background-color: var(--orange);
-    }
-  }
-  }
   }
   .container-2{
     margin: 8rem 0;
@@ -232,30 +348,31 @@ export default {
       }
     }
   }
-.container-center {
-  display: flex;
-  justify-content: center;
-  margin-top: 8rem;
-  .card-miss {
-    width: 1100px;
-    padding: 1rem;
-    border-radius: 1rem;
+  .container-center {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 3px 3px 10px 3px #EBEBEB;
-    .img-size {
+    flex-direction: column;
+    margin-top: 8rem;
+    .card-miss {
+      width: 1100px;
+      padding: 1rem;
+      border-radius: 1rem;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 1rem;
-      img {
-        overflow: hidden;
-        width: 70px;
-        width: 70px;
-        object-fit: cover;
-        border-radius: 100%;
-    }
-    }
+      box-shadow: 3px 3px 10px 3px #EBEBEB;
+      .img-size {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img {
+          overflow: hidden;
+          width: 70px;
+          width: 70px;
+          object-fit: cover;
+          border-radius: 100%;
+        }
+      }
     .name {
       font-weight: bold;
       font-size: 1.3rem;
@@ -269,18 +386,62 @@ export default {
       font-size: 1.5rem;
     }
     .mod-btn {
-    font-size: 1.2rem;
-    border: 0;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    color: #F96C23;
-    background-color: #FFE7DA;
-    cursor: pointer;
-    &:hover{
-      color: white;
-      background-color: var(--orange);
+      font-size: 1.2rem;
+      border: 0;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      color: #F96C23;
+      background-color: #FFE7DA;
+      cursor: pointer;
+      &:hover{
+        color: white;
+        background-color: var(--orange);
+      }
     }
   }
+}
+.container-organisations{
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    margin: 4rem 0;
+  }
+  .mod-btn {
+        font-size: 1.2rem;
+        border: 0;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        color: #F96C23;
+        background-color: #FFE7DA;
+        cursor: pointer;
+        &:hover{
+          color: white;
+          background-color: var(--orange);
+        }
+      }
+  .container-people {
+    display: flex;
+    gap: 1rem;
+    img {
+      width: 400px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      text-align: left;
+      margin: 1rem 0;
+      padding-bottom: 2rem;
+      border-bottom: 1px dashed lightgray;
+    }
+    .bold-num {
+      text-align: left;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .desciption {
+      text-align: left;
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
   }
 }
 }

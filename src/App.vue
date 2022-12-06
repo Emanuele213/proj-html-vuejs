@@ -18,6 +18,7 @@ export default {
     FooterPage,
   },
   data() {
+    // Header
     return {
       arrHeader: [
         {
@@ -56,6 +57,7 @@ export default {
           icon: ' fa-phone',
         },
       ],
+      // Footer
       arrServices: [
         'Marketing Plan',
         'Sales Development',
@@ -99,5 +101,21 @@ ul {
 
 :root {
   --orange: #F86011;
+  --light_orange: #FFE7DA;
+}
+// Scroll bar
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
 }
 </style>

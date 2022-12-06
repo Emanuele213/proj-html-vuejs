@@ -20,13 +20,60 @@ export default {
   data() {
     return {
       arrHeader: [
-        'Home',
-        'Service',
+        {
+          text: 'Home',
+          prefix: 'fa-solid',
+          icon: ' fa-angle-down',
+        },
+        {
+          text: 'Service',
+          prefix: 'fa-solid',
+          icon: ' fa-angle-down',
+        },
+        {
+          text: 'Why Us',
+          prefix: 'fa-',
+          icon: '',
+        },
+        {
+          text: 'Case Studies',
+          prefix: 'fa-',
+          icon: '',
+        },
+        {
+          text: 'About',
+          prefix: 'fa-',
+          icon: '',
+        },
+        {
+          text: 'Blog',
+          prefix: 'fa-',
+          icon: '',
+        },
+        {
+          text: '(555) 802-1234',
+          prefix: 'fa-solid',
+          icon: ' fa-phone',
+        },
+      ],
+      arrServices: [
+        'Marketing Plan',
+        'Sales Development',
+        'Digital Marketing',
+        'Pricing',
         'Why Us',
         'Case Studies',
-        'About',
+      ],
+      arrResources: [
+        'Learning',
+        'Video Tutorials',
+        'Customers',
         'Blog',
-        '(555) 802-1234',
+      ],
+      arrCompany: [
+        'Who We Are',
+        'Contact Us',
+        'Careers',
       ],
     };
   },

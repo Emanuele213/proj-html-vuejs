@@ -10,10 +10,14 @@
         </li>
         <li
           v-for="menu in arrHeader.slice()"
-          :key="menu"
+          :key="menu.text"
           class="mod-menu"
         >
-          {{ menu }}
+          {{ menu.text }}
+          <font-awesome-icon
+            :icon="`${menu.prefix}${menu.icon}`"
+            class="space-left"
+          />
         </li>
         <button class="mod-btn">
           Free Quote
@@ -72,6 +76,24 @@
           </div>
         </div>
       </div>
+      <div class="credit-card">
+        <font-awesome-icon
+          icon="fa-solid fa-credit-card"
+          class="icon-size"
+        />
+        <div>Demos</div>
+      </div>
+      <div class="sale">
+        <div class="dollar">
+          $
+        </div>
+        <div class="num">
+          39
+        </div>
+        <div class="mod-flex">
+          On Sale
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -79,7 +101,7 @@
 <script>
 export default {
   props: {
-    arrHeader: Array,
+    arrHeader: Object,
   },
 };
 </script>
@@ -110,6 +132,9 @@ export default {
       color: var(--orange);
       border-color: var(--orange);
     }
+    .space-left {
+      margin-left: .3rem;
+    }
   }
   .mod-btn {
     font-size: 1.2rem;
@@ -129,6 +154,7 @@ export default {
   background-image: url('@/assets/img/marketing-intro.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   .container-img {
     max-width: 1300px;
     margin: 0 auto;
@@ -163,12 +189,52 @@ export default {
   }
 }
 }
-
+.credit-card {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  background-color: white;
+  border-radius: .5rem;
+  .icon-size{
+    font-size: 2rem;
+    color: #33475B;
+  }
+}
+.sale {
+  position: absolute;
+  right: 1rem;
+  top: 7rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: .5rem;
+  background-color: white;
+  border-radius: .5rem;
+  .dollar{
+    font-size: 1rem;
+    color: #6EC083;
+  }
+  .num {
+    font-size: 1.5rem;
+    color: #6EC083;
+  }
+  .mod-flex {
+    font-size: .8rem;
+    flex: 1 1 60px;
+  }
+}
 .card-people {
   display: flex;
   justify-content: center;
   position: absolute;
-  right: 10rem;
+  right: 7rem;
   top: 6rem;
   z-index: 10;
   width: 450px;

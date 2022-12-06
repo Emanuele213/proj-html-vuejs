@@ -2,7 +2,7 @@
   <header class="bg-white">
     <nav>
       <ul class="container">
-        <li>
+        <li class="flex-img">
           <img
             src="@/assets/img/avada-marketing-logo-2x-200x37.png"
             alt="logo"
@@ -49,6 +49,26 @@
             <div class="description">
               Marketing Consultant Expert
             </div>
+            <div class="number">
+              <font-awesome-icon icon="fa-solid fa-phone" /> (555) 802-1234
+            </div>
+            <label
+              for="name-email-number"
+              class="container-form"
+            >
+              <!-- eslint-disable-next-line -->
+                <input type="text" name="name-email-number" id="name-email-number" placeholder="Your Name*">
+              <!-- eslint-disable-next-line -->
+                <input type="text" name="name-email-number" id="name-email-number" placeholder="Your Email*">
+              <!-- eslint-disable-next-line -->
+                <input type="number" name="name-email-number" id="name-email-number" placeholder="Your Phone Number*">
+              <button class="mod-btn">
+                Get a Callback
+              </button>
+            </label>
+            <div class="paragraph">
+              By submitting my data | agree to be contacted
+            </div>
           </div>
         </div>
       </div>
@@ -77,6 +97,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  .flex-img{
+    display: flex;
+  }
   .mod-menu {
     display: flex;
     align-items: center;
@@ -111,8 +134,9 @@ export default {
     margin: 0 auto;
     display: flex;
     position: relative;
-    padding-bottom: 10rem;
+    padding-bottom: 14rem;
   .container-text {
+    margin-top: 5rem;
     h1 {
       color: white;
       width: 700px;
@@ -133,6 +157,7 @@ export default {
       &:hover{
         cursor: pointer;
         background: none;
+        color: white;
       }
     }
   }
@@ -143,14 +168,15 @@ export default {
   display: flex;
   justify-content: center;
   position: absolute;
-  right: 7rem;
+  right: 10rem;
   top: 6rem;
   z-index: 10;
   width: 450px;
-  height: 550px;
+  height: 600px;
   background-color: white;
   border-radius: 1rem;
   padding: 1.5rem;
+  box-shadow: 3px 3px 10px 3px #EBEBEB;
   .img-size {
     display: flex;
     justify-content: center;
@@ -164,10 +190,58 @@ export default {
     }
   }
   .name-consulant {
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
   }
   .description {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
     color: lightgray;
+  }
+  .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: var(--orange);
+  }
+  .container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    input{
+      font-size: 1.2rem;
+      padding: 1.1rem 1rem;
+      width: 400px;
+      border: 1px solid #DCDCDC;
+      border-radius: .5rem;
+      margin: .5rem 0;
+    }
+  }
+  .mod-btn {
+    font-size: 1.2rem;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: #F96C23;
+    background-color: #FFE7DA;
+    cursor: pointer;
+    &:hover{
+      color: white;
+      background-color: var(--orange);
+    }
+  }
+  .paragraph {
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    font-size: .8rem;
+    color: #C5A491;
   }
 }
 </style>

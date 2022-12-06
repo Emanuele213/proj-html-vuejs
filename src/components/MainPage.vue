@@ -216,6 +216,25 @@
         </div>
       </div>
     </div>
+    <div class="bg-light-grey">
+      <div class="container">
+        <div class="left-part">
+          <h1>We Boost Our Clients’ Bottom Line by Optimizing Their Growth Potential.</h1>
+          <!-- eslint-disable-next-line -->
+          <p>Quisque aliquet, libero consequat elementum convallis, erat risus imperdiet pellentesque sem neque eget.</p>
+          <button class="mod-btn">
+            Why Work With Us
+          </button>
+        </div>
+        <div>
+          <img
+            src="@/assets/img/team-work.jpg"
+            alt="gruppo di lavoro"
+            class="mod-img-team"
+          >
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -407,18 +426,18 @@ export default {
     margin: 4rem 0;
   }
   .mod-btn {
-        font-size: 1.2rem;
-        border: 0;
-        padding: 1rem 2rem;
-        border-radius: 1rem;
-        color: #F96C23;
-        background-color: #FFE7DA;
-        cursor: pointer;
-        &:hover{
-          color: white;
-          background-color: var(--orange);
-        }
-      }
+    font-size: 1.2rem;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: #F96C23;
+    background-color: #FFE7DA;
+    cursor: pointer;
+    &:hover{
+      color: white;
+      background-color: var(--orange);
+    }
+  }
   .container-people {
     display: flex;
     gap: 1rem;
@@ -444,5 +463,45 @@ export default {
     }
   }
 }
+}
+.bg-light-grey {
+  background-color: #F5F5F7;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    .left-part {
+      h1 {
+        font-size: 3rem;
+        text-align: left;
+        width: 500px;
+      }
+      p {
+        font-size: 1.5rem;
+        text-align: left;
+        width: 500px;
+        margin-bottom: 2rem;
+      }
+      .mod-btn {
+        font-size: 1.2rem;
+        border: 0;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        color: #F96C23;
+        background-color: #FFE7DA;
+        cursor: pointer;
+        &:hover{
+          color: white;
+          background-color: var(--orange);
+        }
+      }
+    }
+  }
+  .mod-img-team {
+    width: 550px;
+    margin-top: 5rem;
+  }
 }
 </style>

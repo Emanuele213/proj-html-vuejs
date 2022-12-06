@@ -200,6 +200,9 @@ export default {
   padding: .5rem;
   background-color: white;
   border-radius: .5rem;
+  &:hover{
+    cursor: pointer;
+  }
   .icon-size{
     font-size: 2rem;
     color: #33475B;
@@ -217,6 +220,9 @@ export default {
   padding: .5rem;
   background-color: white;
   border-radius: .5rem;
+  &:hover{
+    cursor: pointer;
+  }
   .dollar{
     font-size: 1rem;
     color: #6EC083;

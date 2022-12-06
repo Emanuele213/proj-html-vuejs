@@ -1,5 +1,6 @@
 <template>
   <main class="main-container">
+    <!-- Prima immagine -->
     <div class="container-1">
       <div>
         <img
@@ -18,6 +19,68 @@
         </div>
         <div class="container-text">
           <h1> Increase Brand Awareness </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Sed auctor placerat
+            luctus. Nullam sit amet ante sed orci
+            convallis gravida et at massa.
+          </p>
+          <button class="mod-btn">
+            Get a Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Seconda Immagine -->
+    <div class="container-2">
+      <div>
+        <img
+          src="@/assets/img/Tranin.png"
+          alt="Brand"
+          class="mod-img"
+        >
+      </div>
+      <div class="container-column">
+        <div class="flex-img">
+          <img
+            src="@/assets/img/Investor (1).png"
+            alt="businesss"
+          >
+          <h3>Investors in People</h3>
+        </div>
+        <div class="container-text">
+          <h1>In-House Sales Traning</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Sed auctor placerat
+            luctus. Nullam sit amet ante sed orci
+            convallis gravida et at massa.
+          </p>
+          <button class="mod-btn">
+            Get a Consultation
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Terza Immagine -->
+    <div class="container-1">
+      <div>
+        <img
+          src="@/assets/img/socila-proof.png"
+          alt="Brand"
+          class="mod-img"
+        >
+      </div>
+      <div class="container-column">
+        <div class="flex-img">
+          <img
+            src="@/assets/img/analysis.png"
+            alt="businesss"
+          >
+          <h3>Investors in People</h3>
+        </div>
+        <div class="container-text">
+          <h1>In-House Sales Traning</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Sed auctor placerat
@@ -81,6 +144,16 @@ export default {
     }
   }
   }
+  }
+  .container-2{
+    margin: 8rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    .mod-img {
+      width: 580px;
+    }
   }
 }
 </style>

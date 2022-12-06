@@ -256,7 +256,6 @@ export default {
       overflow: hidden;
       width: 100px;
       height: 100px;
-      border-radius: 50%;
       object-fit: cover;
       border-radius: 100%;
     }

@@ -2,7 +2,11 @@
   <div>
     <HeaderPage :arr-header="arrHeader" />
     <MainPage />
-    <FooterPage />
+    <FooterPage
+      :arr-services="arrServices"
+      :arr-resources="arrResources"
+      :arr-company="arrCompany"
+    />
   </div>
 </template>
 

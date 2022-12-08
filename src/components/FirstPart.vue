@@ -147,10 +147,7 @@
         <h1>Trusted by Leading Organisations</h1>
         <div class="container-people">
           <div>
-            <img
-              src="@/assets/img/signora.jpg"
-              alt="signora"
-            >
+            <div class="miss-img" />
             <h1>How Spaces attracted five million visitors by improving the content</h1>
             <div class="bold-num">
               200%
@@ -160,10 +157,7 @@
             </div>
           </div>
           <div>
-            <img
-              src="@/assets/img/signore.jpg"
-              alt="signore"
-            >
+            <div class="mr-img" />
             <h1>Creativity helped Hemisferio to increase their brand reach vertically</h1>
             <div class="bold-num">
               10X
@@ -173,10 +167,7 @@
             </div>
           </div>
           <div>
-            <img
-              src="@/assets/img/signora2.jpg"
-              alt="signore"
-            >
+            <div class="miss-2-img" />
             <h1>How DigitalBox used Al-powered data insight to boost sales</h1>
             <div class="bold-num">
               3-year
@@ -349,8 +340,38 @@ export default {
   .container-people {
     display: flex;
     gap: 1rem;
-    img {
+    .miss-img {
       width: 400px;
+      height: 450px;
+      background-image: url('@/assets/img/signora.jpg');
+      background-size: cover;
+      &:hover {
+        background: linear-gradient( to bottom , transparent, 60%, orange),
+        url('@/assets/img/signora.jpg');
+        background-size: cover;
+      }
+    }
+    .mr-img {
+      width: 400px;
+      height: 450px;
+      background-image: url('@/assets/img/signore.jpg');
+      background-size: cover;
+      &:hover {
+        background: linear-gradient( to bottom , transparent, 60%, orange),
+        url('@/assets/img/signore.jpg');
+        background-size: cover;
+      }
+    }
+    .miss-2-img {
+      width: 400px;
+      height: 450px;
+      background-image: url('@/assets/img/signora2.jpg');
+      background-size: cover;
+      &:hover {
+        background: linear-gradient( to bottom , transparent, 60%, orange),
+        url('@/assets/img/signora2.jpg');
+        background-size: cover;
+      }
     }
     h1 {
       font-size: 1.5rem;

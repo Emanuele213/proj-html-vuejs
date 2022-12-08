@@ -39,24 +39,15 @@
       <div class="container">
         <div class="container-flex-img">
           <div>
-            <img
-              src="@/assets/img/blog-posts-6-400x267.jpg"
-              alt="post"
-            >
+            <div class="pc-img" />
             <h2>Marketing Tips And Tricks For Your Website</h2>
           </div>
           <div>
-            <img
-              src="@/assets/img/blog-posts-5-400x267.jpg"
-              alt="post"
-            >
+            <div class="pen-img" />
             <h2>How to Write Stunning Blog Post Titles</h2>
           </div>
           <div>
-            <img
-              src="@/assets/img/blog-posts-4-400x267.jpg"
-              alt="post"
-            >
+            <div class="phone-img" />
             <h2>Techniques to Reduce Facebook Ads Spend</h2>
           </div>
         </div>
@@ -197,6 +188,7 @@ export default {
     .container-flex {
       display: flex;
       align-items: flex-end;
+      justify-content: space-between;
       h1 {
       width: 55%;
       font-size: 3rem;
@@ -220,6 +212,39 @@ export default {
     .container-flex-img {
       display: flex;
       gap: 1rem;
+      .pc-img {
+        width: 400px;
+        height: 267px;
+        background-image: url('@/assets/img/blog-posts-6-400x267.jpg');
+        background-size: cover;
+        &:hover {
+          background: linear-gradient( to bottom , transparent, 60%, orange),
+          url('@/assets/img/blog-posts-6-400x267.jpg');
+          background-size: cover;
+        }
+      }
+      .pen-img {
+        width: 400px;
+        height: 267px;
+        background-image: url('@/assets/img/blog-posts-5-400x267.jpg');
+        background-size: cover;
+        &:hover {
+          background: linear-gradient( to bottom , transparent, 60%, orange),
+          url('@/assets/img/blog-posts-5-400x267.jpg');
+          background-size: cover;
+        }
+      }
+      .phone-img {
+        width: 400px;
+        height: 267px;
+        background-image: url('@/assets/img/blog-posts-4-400x267.jpg');
+        background-size: cover;
+        &:hover {
+          background: linear-gradient( to bottom , transparent, 60%, orange),
+          url('@/assets/img/blog-posts-4-400x267.jpg');
+          background-size: cover;
+        }
+      }
       h2 {
         font-size: 1.7rem;
         margin-bottom: 7rem;
